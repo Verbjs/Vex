@@ -1,12 +1,15 @@
 # Vex
 
-## Nedir
+## Document
+[Document site](https://verbjs.github.io/polat-poyraz.github.io/index.html#document)
+
+## What is?
 Vex global verilerinizi verb uygulamanızda tutabileceğiniz ve bunları tek bir merkezden yönetebileceğiniz bir yapıdır, "global store managment" olarak geçen bu kavramın verb.js de olması büyük katkı sağlamaktadır, bu sayede uygulamanızın çoğunlukla kullandığı değerleri tek bir yerden yönetim değişimleri rahatça yapabilirsiniz.
 
-## Hakkında
+## About
 Vex bir derleme işlemi yapmaz, vex yanlızca kendisine "use" edilmiş verb ü veya verb bileşenlerinin "$update" methodunu çalıştırır, bu sayede derlemeleri bileşenler ve verb yapar, güncellemeyi yanlızca vex işler.
 
-## structor
+## Structor
 Vex bir class dır, yanlızca bir parameter alır, bu parametre bir obje olmalıdır, içerisinde "state" ve "actions" değerleri bulunmalıdır, bu değerler de birer obje olmalıdır.
 
 #### state
