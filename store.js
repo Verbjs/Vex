@@ -1,5 +1,3 @@
-import { panic } from "../system/error.js"
-
 export class Vex {
     constructor({ state = {}, actions = {} }) {
         window.$storeSettings = {
@@ -18,11 +16,11 @@ export class Vex {
 
         if (typeof state === 'object' && !Array.isArray(state)) {
             this.state = this.stateHandler(state)
-        } else return panic().err('state must be of an object type')
+        } else return console.error('state must be of an object type')
 
         if (typeof actions === 'object' && !Array.isArray(actions)) {
             this.actions = actions
-        } else panic().err('action must be of an object type')
+        } else console.error('action must be of an object type')
     }
 
     stateHandler(obj) {
@@ -83,7 +81,7 @@ export class Vex {
         if (typeof asset === 'object' && !Array.isArray(asset) && asset.$update !== undefined) {
             this.assets.push(asset)
         } else {
-            panic().err('The assets you add to the store must be a verb or verb component')
+            console.error('The assets you add to the store must be a verb or verb component')
         }
     }
 }
